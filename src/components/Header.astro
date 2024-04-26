@@ -6,7 +6,7 @@ import RocketIcon from "./icons/RocketIcon.astro";
 import ClockIcon from "./icons/ClockIcon.astro";
 import CherryIcon from "./icons/CherryIcon.astro";
 import MarkdownIcon from "./icons/MarkdownIcon.astro";
-/* import { Counter } from "./Counter" */
+ import { Counter } from "./Counter"
 /* interface Props {
 	title: string;
 	body: string;
@@ -28,6 +28,7 @@ const { href, title, body } = Astro.props; */
  
 
   <nav class="flex flex-col items-center justify-between w-full text-center md:flex-row">
+    <Counter client:visible/>
     <HeaderButton class="text-white" href="/">
       Last launches
       <RocketIcon slot="before"/>
