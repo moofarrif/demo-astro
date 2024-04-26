@@ -1,12 +1,11 @@
 ---
-
-import HeaderButton from "./HeaderButton.astro";
-import QuestionIcon from "./icons/QuestionIcon.astro";
-import RocketIcon from "./icons/RocketIcon.astro";
-import ClockIcon from "./icons/ClockIcon.astro";
-import CherryIcon from "./icons/CherryIcon.astro";
-import MarkdownIcon from "./icons/MarkdownIcon.astro";
- import { Counter } from "./Counter"
+import HeaderButton from './HeaderButton.astro';
+import QuestionIcon from './icons/QuestionIcon.astro';
+import RocketIcon from './icons/RocketIcon.astro';
+import ClockIcon from './icons/ClockIcon.astro';
+// import CherryIcon from './icons/CherryIcon.astro';
+import MarkdownIcon from './icons/MarkdownIcon.astro';
+//  import { Counter } from "./Counter"
 /* interface Props {
 	title: string;
 	body: string;
@@ -18,41 +17,47 @@ const { href, title, body } = Astro.props; */
 
 <header class="py-8 px-4 mx-auto max-w-xl lg:py-16 lg:px-6">
   <div class="mx-auto text-center mb-8 lg:mb-8">
-    <a class="text-5xl tracking-tight font-bold text-white" href="/">
+    <a
+      class="text-5xl tracking-tight font-bold text-white"
+      href="/">
       SpaceX Launches 🚀
     </a>
-    <p class="font-light text-gray-500 sm:text-xl dark:text-gray-400 ">
-      All the information about SpaceX launches
-    </p>
+    <p class="font-light text-gray-500 sm:text-xl dark:text-gray-400">All the information about SpaceX launches</p>
   </div>
- 
 
   <nav class="flex flex-col items-center justify-between w-full text-center md:flex-row">
-    <Counter client:visible/>
-    <HeaderButton class="text-white" href="/">
+    <!-- <Counter client:visible/> -->
+    <HeaderButton
+      class="text-white"
+      href="/">
       Last launches
-      <RocketIcon slot="before"/>
+      <RocketIcon slot="before" />
     </HeaderButton>
-    <HeaderButton class="text-white" href="/oldest">
+    <HeaderButton
+      class="text-white"
+      href="/oldest">
       Oldest launches
-      <ClockIcon slot="before"/>
+      <ClockIcon slot="before" />
     </HeaderButton>
-    <HeaderButton class="text-white" href="/about">
+    <HeaderButton
+      class="text-white"
+      href="/about">
       About the project
-      <QuestionIcon slot="before"/>
+      <QuestionIcon slot="before" />
     </HeaderButton>
-    <HeaderButton class="text-white" href="/content">
+    <HeaderButton
+      class="text-white"
+      href="/content">
       Markdown page
-      <MarkdownIcon slot="before"/>
+      <MarkdownIcon slot="before" />
     </HeaderButton>
-    <!-- <HeaderButton class="text-white" href="/love">
+    <!-- <HeaderButton
+      class="text-white"
+      href="/love">
       My love
-      <CherryIcon slot="before"/>
+      <CherryIcon slot="before" />
     </HeaderButton> -->
   </nav>
-
 </header>
 
-<style>
-	
-</style>
+<style></style>
