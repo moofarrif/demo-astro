@@ -3,7 +3,7 @@ import HeaderButton from './HeaderButton.astro';
 import QuestionIcon from './icons/QuestionIcon.astro';
 import RocketIcon from './icons/RocketIcon.astro';
 import ClockIcon from './icons/ClockIcon.astro';
-// import CherryIcon from './icons/CherryIcon.astro';
+import CherryIcon from './icons/CherryIcon.astro';
 import MarkdownIcon from './icons/MarkdownIcon.astro';
 //  import { Counter } from "./Counter"
 /* interface Props {
@@ -33,12 +33,12 @@ const { href, title, body } = Astro.props; */
       Last launches
       <RocketIcon slot="before" />
     </HeaderButton>
-    <HeaderButton
+    <!-- <HeaderButton
       class="text-white"
       href="/oldest">
       Oldest launches
       <ClockIcon slot="before" />
-    </HeaderButton>
+    </HeaderButton> -->
     <HeaderButton
       class="text-white"
       href="/about">
@@ -51,12 +51,13 @@ const { href, title, body } = Astro.props; */
       Markdown page
       <MarkdownIcon slot="before" />
     </HeaderButton>
-    <!-- <HeaderButton
+
+    <HeaderButton
       class="text-white"
       href="/love">
       My love
       <CherryIcon slot="before" />
-    </HeaderButton> -->
+    </HeaderButton>
   </nav>
 </header>
 
