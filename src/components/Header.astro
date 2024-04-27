@@ -2,10 +2,9 @@
 import HeaderButton from './HeaderButton.astro';
 import QuestionIcon from './icons/QuestionIcon.astro';
 import RocketIcon from './icons/RocketIcon.astro';
-import ClockIcon from './icons/ClockIcon.astro';
 import CherryIcon from './icons/CherryIcon.astro';
 import MarkdownIcon from './icons/MarkdownIcon.astro';
-//  import { Counter } from "./Counter"
+import { Counter } from './Counter';
 /* interface Props {
 	title: string;
 	body: string;
@@ -15,7 +14,7 @@ import MarkdownIcon from './icons/MarkdownIcon.astro';
 const { href, title, body } = Astro.props; */
 ---
 
-<header class="py-8 px-4 mx-auto max-w-xl lg:py-16 lg:px-6">
+<header transition:persist class="py-8 px-4 mx-auto max-w-xl lg:py-16 lg:px-6">
   <div class="mx-auto text-center mb-8 lg:mb-8">
     <a
       class="text-5xl tracking-tight font-bold text-white"
@@ -26,19 +25,13 @@ const { href, title, body } = Astro.props; */
   </div>
 
   <nav class="flex flex-col items-center justify-between w-full text-center md:flex-row">
-    <!-- <Counter client:visible/> -->
+    <Counter client:idle />
     <HeaderButton
       class="text-white"
       href="/">
       Last launches
       <RocketIcon slot="before" />
     </HeaderButton>
-    <!-- <HeaderButton
-      class="text-white"
-      href="/oldest">
-      Oldest launches
-      <ClockIcon slot="before" />
-    </HeaderButton> -->
     <HeaderButton
       class="text-white"
       href="/about">
